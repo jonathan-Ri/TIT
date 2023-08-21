@@ -1,0 +1,18 @@
+traer repocitorio existente: git clone https://github.com/jonathan-Ri/TIT.git
+verificar cambios actuales: git status
+añadir archivos a guardar: git add [nombre del archivo/ruta de carpeta a guardar]
+guarda todos los cambios: git add .
+hacer commit: git commit -m "mensaje descriptivo de los cambios realizados"
+crear una rama: git branch [nombre de la rama]
+cambiar a una rama: get checkout [nombre_de_la_rama]
+crear y cambiar una rama en un solo paso: git checkout -b [nombre de la rama]
+sincronizacion con repositorio remoto: git remote add origin [URL del repositorio remoto]//origin puede cambiar al nombre del repositorio a conectarse
+subir cambios: git push origin [nombre de la rama(ej: main)]//origin puede cambiar al nombre del repositorio a conectarse
+//no se suben los cambios a la rama main se suben a la rama de usuario(cuando se trabaja entre varias personas, alguien debe asegurarse de que todo funcione bien antes de que se combine con la rama principal)
+descargar los ultimos cambios: git pull origin [nombre de la rama]
+fusionar ramas: git checkout main
+                git merge feature//nombre de la rama a combinar
+//Resolver conflictos de manera manual en caso de que de error el merge
+historial de commit: git log
+//antes de hacer push es buena idea hacer pull para obtener los ultimos cambios y evitar conflictos.
+//usar mensajes de commit claros y descriptivos ayuda a mantener el historial legible.
