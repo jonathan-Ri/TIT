@@ -15,23 +15,33 @@ CREATE TABLE avatares(
 CREATE TABLE jugador (
     id_jugador INT AUTO_INCREMENT PRIMARY KEY,
     fondo INT DEFAULT 3000,
-    rol ENUM('Ataque', 'Defensa'),
     id_avatar INT,
-    FOREIGN KEY (id_avatar) REFERENCES avatares(id_avatar)
+    id_equipo INT,
+    FOREIGN KEY (id_avatar) REFERENCES avatares(id_avatar),
+    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo),
+    UNIQUE (id_avatar)  
 );
 
 CREATE TABLE equipo(
-    rol ENUM('Ataque', 'Defensa'),
-
-)
+    id_equipo INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_equipo ENUM("Equipo de Ataque", "Equipo de Defensa"),
+    pozo_comun INT DEFAULT 18000
+);
 
 CREATE TABLE rondas(
-
-)
+    id_ronda INT AUTO_INCREMENT PRIMARY KEY,
+    num_ronda INT,
+    estado_ronda ENUM("En curso", "Completada") DEFAULT "En curso"
+);
 
 CREATE TABLE donacion(
-    id_jugador
-)
+    id_donacion INT AUTO_INCREMENT PRIMARY KEY,
+    donacion INT DEFAULT 0,
+    id_jugador INT,
+    id_ronda INT,
+    FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador),
+    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+);
 
 
 
