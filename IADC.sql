@@ -1,6 +1,6 @@
 CREATE DATABASE IADC;
 
-CREATE TABLE Juego (
+CREATE TABLE juego (
    id_juego INT AUTO_INCREMENT PRIMARY KEY,  
    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -28,10 +28,10 @@ CREATE TABLE equipo(
     pozo_comun INT DEFAULT 18000
 );
 
-CREATE TABLE rondas(
+CREATE TABLE ronda(
     id_ronda INT AUTO_INCREMENT PRIMARY KEY,
     num_ronda INT,
-    estado_ronda ENUM("En curso", "Completada") DEFAULT "En curso"
+    ronda_completada BOOLEAN
 );
 
 CREATE TABLE donacion(
