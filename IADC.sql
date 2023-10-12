@@ -7,25 +7,18 @@ CREATE TABLE juego (
 
 
 
-CREATE TABLE avatares(
-    id_avatar INT AUTO_INCREMENT PRIMARY KEY,
-    imagen BLOB
-);
-
 CREATE TABLE equipo(
     id_equipo INT AUTO_INCREMENT PRIMARY KEY,
     nombre_equipo ENUM("Equipo de Ataque", "Equipo de Defensa"),
-    pozo_comun INT DEFAULT 18000
+    pozo_comun INT DEFAULT 0
 );
 
 CREATE TABLE jugador (
     id_jugador INT AUTO_INCREMENT PRIMARY KEY,
     fondo INT DEFAULT 3000,
-    id_avatar INT,
+    imagen BLOB,
     id_equipo INT,
-    FOREIGN KEY (id_avatar) REFERENCES avatares(id_avatar),
-    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo),
-    UNIQUE (id_avatar)  
+    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo) 
 );
 
 
@@ -44,6 +37,34 @@ CREATE TABLE donacion(
     FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
 );
 
+CREATE TABLE negociacion(
+    id_negociacion INT AUTO_INCREMENT PRIMARY KEY,
+    continuar BOOLEAN DEFAULT FALSE,
+    id_ronda INT,
+    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+);
+
+CREATE TABLE castigo(
+    id_castigo INT AUTO_INCREMENT PRIMARY KEY,
+    monto INT,
+    id_remitente INT,
+    id_receptor INT,
+    id_ronda INT,
+    FOREIGN KEY (id_remitente) REFERENCES jugador(id_jugador),
+    FOREIGN KEY (id_receptor) REFERENCES jugador(id_jugador),
+    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+);
+
+CREATE TABLE prestigio(
+    id_prestigio INT AUTO_INCREMENT PRIMARY KEY,
+    monto INT,
+    id_remitente INT,
+    id_receptor INT,
+    id_ronda INT,
+    FOREIGN KEY (id_remitente) REFERENCES jugador(id_jugador),
+    FOREIGN KEY (id_receptor) REFERENCES jugador(id_jugador),
+    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+);
 
 
 -- Reestablecer la ronda al numero 1 cada vez que empiece un juego nuevo.
