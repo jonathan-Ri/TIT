@@ -25,7 +25,7 @@ CREATE TABLE jugador (
 CREATE TABLE ronda(
     id_ronda INT AUTO_INCREMENT PRIMARY KEY,
     num_ronda INT,
-    ronda_completada BOOLEAN
+    ronda_completada BOOLEAN,
     id_juego INT,
     FOREIGN KEY (id_juego) REFERENCES juego(id_juego)
 );
