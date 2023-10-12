@@ -5,8 +5,6 @@ CREATE TABLE juego (
    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
-
 CREATE TABLE equipo(
     id_equipo INT AUTO_INCREMENT PRIMARY KEY,
     nombre_equipo ENUM("Equipo de Ataque", "Equipo de Defensa"),
@@ -34,14 +32,14 @@ CREATE TABLE donacion(
     id_jugador INT,
     id_ronda INT,
     FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador),
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 CREATE TABLE negociacion(
     id_negociacion INT AUTO_INCREMENT PRIMARY KEY,
     continuar BOOLEAN DEFAULT FALSE,
     id_ronda INT,
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 CREATE TABLE castigo(
@@ -52,7 +50,7 @@ CREATE TABLE castigo(
     id_ronda INT,
     FOREIGN KEY (id_remitente) REFERENCES jugador(id_jugador),
     FOREIGN KEY (id_receptor) REFERENCES jugador(id_jugador),
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 CREATE TABLE prestigio(
@@ -63,7 +61,7 @@ CREATE TABLE prestigio(
     id_ronda INT,
     FOREIGN KEY (id_remitente) REFERENCES jugador(id_jugador),
     FOREIGN KEY (id_receptor) REFERENCES jugador(id_jugador),
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 
