@@ -12,6 +12,12 @@ CREATE TABLE avatares(
     imagen BLOB
 );
 
+CREATE TABLE equipo(
+    id_equipo INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_equipo ENUM("Equipo de Ataque", "Equipo de Defensa"),
+    pozo_comun INT DEFAULT 18000
+);
+
 CREATE TABLE jugador (
     id_jugador INT AUTO_INCREMENT PRIMARY KEY,
     fondo INT DEFAULT 3000,
@@ -22,11 +28,6 @@ CREATE TABLE jugador (
     UNIQUE (id_avatar)  
 );
 
-CREATE TABLE equipo(
-    id_equipo INT AUTO_INCREMENT PRIMARY KEY,
-    nombre_equipo ENUM("Equipo de Ataque", "Equipo de Defensa"),
-    pozo_comun INT DEFAULT 18000
-);
 
 CREATE TABLE ronda(
     id_ronda INT AUTO_INCREMENT PRIMARY KEY,
