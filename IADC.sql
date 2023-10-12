@@ -1,11 +1,11 @@
 CREATE DATABASE IADC;
 
+USE IADC;
+
 CREATE TABLE juego (
    id_juego INT AUTO_INCREMENT PRIMARY KEY,  
    fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
-
 
 CREATE TABLE equipo(
     id_equipo INT AUTO_INCREMENT PRIMARY KEY,
@@ -25,7 +25,9 @@ CREATE TABLE jugador (
 CREATE TABLE ronda(
     id_ronda INT AUTO_INCREMENT PRIMARY KEY,
     num_ronda INT,
-    ronda_completada BOOLEAN
+    ronda_completada BOOLEAN,
+    id_juego INT,
+    FOREIGN KEY (id_juego) REFERENCES juego(id_juego)
 );
 
 CREATE TABLE donacion(
@@ -34,14 +36,14 @@ CREATE TABLE donacion(
     id_jugador INT,
     id_ronda INT,
     FOREIGN KEY (id_jugador) REFERENCES jugador(id_jugador),
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 CREATE TABLE negociacion(
     id_negociacion INT AUTO_INCREMENT PRIMARY KEY,
     continuar BOOLEAN DEFAULT FALSE,
     id_ronda INT,
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 CREATE TABLE castigo(
@@ -52,7 +54,7 @@ CREATE TABLE castigo(
     id_ronda INT,
     FOREIGN KEY (id_remitente) REFERENCES jugador(id_jugador),
     FOREIGN KEY (id_receptor) REFERENCES jugador(id_jugador),
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 CREATE TABLE prestigio(
@@ -63,7 +65,7 @@ CREATE TABLE prestigio(
     id_ronda INT,
     FOREIGN KEY (id_remitente) REFERENCES jugador(id_jugador),
     FOREIGN KEY (id_receptor) REFERENCES jugador(id_jugador),
-    FOREIGN KEY (id_ronda) REFERENCES rondas(id_ronda)
+    FOREIGN KEY (id_ronda) REFERENCES ronda(id_ronda)
 );
 
 
