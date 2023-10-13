@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './tutorial1.css'
-
-
+import styles from './tutorial1.module.css'
+import img1 from './img.png'
+import { Link } from 'react-router-dom';
 
 const Tutorial1 = () => {
   return (
@@ -9,7 +9,7 @@ const Tutorial1 = () => {
      <div class="container">
        <div class="row">
         <div class="col">
-
+           <Link to='/'>←</Link>
         </div>
         <div class="col">
           <h1>GUÍA DE JUEGO</h1>
@@ -20,10 +20,33 @@ const Tutorial1 = () => {
             </div>
         </div>
 
+
+        
+
        </div>
        <div class="row">
-        <div class="col"> <h3>A partir de este momento, usted y su equipo forman parte de una red de universidades que forman parte del proyecto Fondecyt. Todos los juegos en que participará se están ejecutando simultáneamente con equipos de esas universidades para competir con ustedes.</h3> </div>
-        <div class="col"> <img src="./asd" alt="imagen explicativa 1" /> </div>
+        <div class="col"> 
+          <div class="row">
+            <h4> el dinero</h4>
+            
+          <div class="row">
+            <div class="col">
+              <h5>Comienzas con $3.000.
+A través de donaciones del grupo, se colectan donaciones para el pozo cómun.</h5>
+            </div>
+            <div class="col">
+               <img src={img1} alt="imagen 2"/>
+            </div>
+          </div>
+          <div class="row">
+            <div className={styles.segmented_line}></div>
+          </div>
+          </div>
+
+        </div>
+        <div class="col"> 
+        
+        </div>
        </div>
        <div class="col"> <button>Ok, continuemos!</button> </div>
      </div>
