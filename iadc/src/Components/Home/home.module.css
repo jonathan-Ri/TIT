@@ -21,3 +21,11 @@ button{
     font-size: 26px;
     margin: 40px;
 }
+
+body{
+    margin:2%
+}
+
+.imagen{
+    width: 400px;
+}
