@@ -1,6 +1,6 @@
 //imports
 
-import Home from './Components/Home/home.component'
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,6 +15,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 // Import from react-router-dom
 //import { Switch, Route, Link } from "react-router-dom";
 
+
+//import de los component
+import Home from './Components/Home/home.component'
+import Tutorial1 from './Components/Tutorial1/tutorial1.component'
+
 function App() {
   return (
     <div className="App">
@@ -27,7 +32,8 @@ function App() {
             <Router>
              <Routes>
                <Route path="/" element={<Home />} />
-               <Route path="/1" component={Home}/>
+               <Route path="/home" element={<Home />}/>
+               <Route path="/tutorial-1" element={<Tutorial1 />}/>
              </Routes>
            </Router>
             </Col>
