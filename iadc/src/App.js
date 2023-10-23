@@ -19,6 +19,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 //import de los component
 import Home from './Components/Home/home.component'
 import Tutorial1 from './Components/Tutorial1/tutorial1.component'
+import Tutorial2 from './Components/Tutorial2/tutorial2.component';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
                <Route path="/" element={<Home />} />
                <Route path="/home" element={<Home />}/>
                <Route path="/tutorial-1" element={<Tutorial1 />}/>
+               <Route path="/tutorial-2" element={<Tutorial2 />}/>
              </Routes>
            </Router>
             </Col>
