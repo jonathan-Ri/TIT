@@ -23,10 +23,12 @@ h3{
     padding: 10px;
 }
 
-body{
-    margin:2%
-}
 
 .imagen{
     width: 400px;
+}
+
+body{
+    margin: 0;
+    width: 100%;
 }

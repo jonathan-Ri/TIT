@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 
 const Tutorial1 = () => {
   return (
-    <body>
      <div class="container">
+      <br></br>
        <div class="row">
         <div class="col">
            <Link className={styles.arrow}to='/'>←</Link>
@@ -116,7 +116,6 @@ A través de donaciones del grupo, se colectan donaciones para el pozo cómun, l
        </div>
        <div class="col"> <Link className={styles.buton} to="/tutorial-2">Ok, continuemos!</Link></div>
      </div>
-    </body>
      
   );
 }

@@ -10,6 +10,7 @@ const Tutorial1 = () => {
   return (
     <body>
      <div class="container">
+     <br></br>
        <div class="row">
         <div class="col">
            <Link className={styles.arrow}to='/tutorial-1'>←</Link>
