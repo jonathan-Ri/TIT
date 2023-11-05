@@ -20,13 +20,11 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Home from './Components/Home/home.component'
 import Tutorial1 from './Components/Tutorial1/tutorial1.component'
 import Tutorial2 from './Components/Tutorial2/tutorial2.component';
+import Inicio from './Components/Inicio/Inicio.component'
 
 function App() {
   return (
     <div className="App">
-      <header className="header">
-        
-      </header>
         <Container>
           <Row>
             <Col md={12}>
@@ -36,6 +34,7 @@ function App() {
                <Route path="/home" element={<Home />}/>
                <Route path="/tutorial-1" element={<Tutorial1 />}/>
                <Route path="/tutorial-2" element={<Tutorial2 />}/>
+               <Route path="/inicio" element={<Inicio />}/>
              </Routes>
            </Router>
             </Col>

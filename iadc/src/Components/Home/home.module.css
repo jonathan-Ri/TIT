@@ -12,7 +12,7 @@ h3{
     font-family: 'Poppins', sans-serif;
     text-align: justify;
 }
-button{
+.buton{
     color: black;
     background-color: #2AEA8E;
     border: none;
@@ -20,6 +20,7 @@ button{
     font-family: 'Poppins', sans-serif;
     font-size: 26px;
     margin: 40px;
+    padding: 10px;
 }
 
 body{

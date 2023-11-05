@@ -12,7 +12,7 @@ const Tutorial1 = () => {
      <div class="container">
        <div class="row">
         <div class="col">
-           <Link to='/'>←</Link>
+           <Link className={styles.arrow}to='/'>←</Link>
         </div>
         <div class="col">
           <h1>GUÍA DE JUEGO</h1>
@@ -91,11 +91,11 @@ A través de donaciones del grupo, se colectan donaciones para el pozo cómun, l
 
         <div class="col"> 
         <div class="row">
-            <h4>Fase de estatus</h4>
+            <h4>Negociación</h4>
             
           <div class="row">
             <div class="col">
-              <h5> Después de cada ronda de ataque o defensa vendrá esta fase, en ella los miembros del equipo podrán ver en la pantalla del computador cuánto donó cada miembro del equipo, con cuanto se quedó y el resultado de la interacción.</h5>
+              <h5>Corresponderá a un espacio presencial, en el que podrán discutir como equipo, sobre su permanencia en el juego, avance a otra fase y rol correspondiente</h5>
             </div>
             <div class="col">
                <img src={img4} alt="imagen 2"/>
@@ -114,8 +114,7 @@ A través de donaciones del grupo, se colectan donaciones para el pozo cómun, l
 
 
        </div>
-       <div class="col"> <button>Ok, continuemos!</button> </div>
-       <div class="col"> <Link className={styles.button} to="/tutorial-2">Ok, continuemos!</Link></div>
+       <div class="col"> <Link className={styles.buton} to="/tutorial-2">Ok, continuemos!</Link></div>
      </div>
     </body>
      
