@@ -20,5 +20,8 @@
     width: 400px;
     height: 40%;
     font-size: 40px;
-    margin: 10%;
+    margin: 5%;
+}
+button{
+    border-radius: 15px;
 }
