@@ -6,7 +6,7 @@ import './App.css';
 
 import React, { Component } from "react"; 
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom';
 // Import Bootstrap
 import { Navbar, Container, Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";

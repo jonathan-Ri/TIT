@@ -18,10 +18,13 @@
 }
 .imputInicio{
     width: 400px;
-    height: 40%;
+    height: 20%;
     font-size: 40px;
     margin: 5%;
 }
 button{
-    border-radius: 15px;
+    border-radius: 30px;
+    width: 200px;
+    height: 45px;
+    background-color: #98AD77;
 }
