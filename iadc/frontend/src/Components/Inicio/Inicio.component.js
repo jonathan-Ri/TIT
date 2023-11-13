@@ -1,24 +1,20 @@
 import React ,{ useState } from 'react';
 import styles from './Inicio.module.css'
-import fondo from './fondo.PNG'
-import { Link} from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 
 const Inicio = () => {
   const navigate = useNavigate();
-  const [redirigir, setRedirigir] = useState(false);
   const [mensaje, setMensaje] = useState('');
-  const [tuToken, setToken] = useState({id:''});
-
+  const [tuToken, setToken] = useState({id:'as'});
+  var token={}
   const handleMensajeChange = (e) => {
     setMensaje(e.target.value);
   };
   const handleSubmit = (event) => {
-    event.preventDefault();
-    setToken({id:mensaje})
-    // Aquí puedes realizar las acciones relacionadas con el envío del formulario
-    localStorage.setItem('token', tuToken);
-    alert(tuToken)
+    //event.preventDefault();
+    setToken({id:'998'})
+    token=mensaje
+    localStorage.setItem('token', token);
     // Luego, activa la redirección
     navigate('/donar');
 };

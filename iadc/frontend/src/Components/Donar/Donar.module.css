@@ -17,8 +17,8 @@
     
 }
 .imputInicio{
-    width: 400px;
-    height: 20%;
+    width: 300px;
+    height: 15%;
     font-size: 40px;
     margin: 5%;
 }
@@ -27,4 +27,21 @@ button{
     width: 200px;
     height: 45px;
     background-color: #98AD77;
+}
+.Rol{
+    border-radius: 30px;
+    width: 200px;
+    height: 45px;
+    background-color: #CAE1A5;
+    margin-left: 45%;
+    margin-bottom: 10px;
+}
+.presupuesto{
+    width: 300px;
+    height: 100%;
+    font-size: 40px;
+    border: 2px solid #000000
+}
+.icono{
+    width: 10%;
 }
