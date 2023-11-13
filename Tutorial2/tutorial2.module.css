@@ -1,0 +1,49 @@
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    margin: 2.5%;
+}
+
+img{
+    width: 200px;
+}
+
+
+Link{
+    text-decoration: none;
+    font-size: large;
+}
+.ovalo{
+    color: black;
+    border-radius: 25px;
+    border: 2px dashed black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+div.segmented_line {
+    width: 600px; /* Ancho de la línea */
+    height: 4px; /* Grosor de la línea */
+    border-bottom: 3px dashed black; /* Borde segmentado con línea discontinua */
+}
+
+
+.buton{
+    color: black;
+    background-color: #2AEA8E;
+    border: none;
+    width: 20%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    margin: 40px;
+    padding: 10px;
+}
+
+.arrow{
+    display: inline-block;
+    padding: 10px;
+    background-color: #2AEA8E;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}

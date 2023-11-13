@@ -8,24 +8,26 @@ const Inicio = () => {
   const navigate = useNavigate();
   const [redirigir, setRedirigir] = useState(false);
   const [mensaje, setMensaje] = useState('');
+  const [tuToken, setToken] = useState({id:''});
 
   const handleMensajeChange = (e) => {
     setMensaje(e.target.value);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
+    setToken({id:mensaje})
     // Aquí puedes realizar las acciones relacionadas con el envío del formulario
-    
+    localStorage.setItem('token', tuToken);
+    alert(tuToken)
     // Luego, activa la redirección
-    navigate('/Donar');
+    navigate('/donar');
 };
   return (
      <div className={styles.bodi}>
        <div class="row">
         <form className={styles.formInicio} onSubmit={handleSubmit}>
          <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
-         <input class={styles.imputInicio} type="text" id="id" name="id" onChange={handleMensajeChange}/>
+         <input class={styles.imputInicio} type="text" id="id" name="id" placeholder="Ej: A1B2C3" onChange={handleMensajeChange}/>
          <br></br>
          <button type='submit'>Aceptar</button>
         </form>
