@@ -1,7 +1,7 @@
 //Importar dependencias
 const express = require("express");
 const cors = require("cors");
-const db = require("./app/models");
+const db = require("./backend/models");
 const app = express();
 //configuración de cors (control de acceso)
 app.use(cors())
@@ -25,10 +25,10 @@ db.sequelize.sync({ alter: true }).then(() => {
 });*/
 
 
-require("./app/routes/ronda.routes")(app);
-require("./app/routes/productos.routes")(app);
-require("./app/routes/proveedor.routes")(app);
-require("./app/routes/juego.routes")(app);
+require("./backend/routes/ronda.routes")(app);
+require("./backend/routes/productos.routes")(app);
+require("./backend/routes/proveedor.routes")(app);
+require("./backend/routes/juego.routes")(app);
 
 
 // ruta simple
