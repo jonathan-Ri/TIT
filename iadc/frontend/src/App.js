@@ -22,6 +22,7 @@ import Tutorial1 from './Components/Tutorial1/tutorial1.component'
 import Tutorial2 from './Components/Tutorial2/tutorial2.component';
 import Inicio from './Components/Inicio/Inicio.component'
 import Donar from './Components/Donar/Donar.component'
+import Fondo from './Components/Fondo/fondo.component'
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
                <Route path="/tutorial-2" element={<Tutorial2 />}/>
                <Route path="/inicio" element={<Inicio />}/>
                <Route path="/donar" element={<Donar />}/>
+               <Route path="/fondo" element={<Fondo />}/>
              </Routes>
            </Router>
             </Col>

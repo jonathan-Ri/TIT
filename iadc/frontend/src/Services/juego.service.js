@@ -8,10 +8,10 @@ const get = id =>{
     return http.get(`/juego/${id}`);
 }
 
-const create = data=()=>{
+const create = data =>{
     return http.post('/juego',data);
 }
-
+//juego.create({'id':1234, 'nombre':juego})
 const update = (id, data) => {
     return http.put(`/juego/${id}`, data);
 };
