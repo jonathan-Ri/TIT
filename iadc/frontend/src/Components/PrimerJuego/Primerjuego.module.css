@@ -1,0 +1,34 @@
+.body {
+    background-image: url('./fondo.PNG');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+  }
+  
+  .Titulo {
+    font-family: 'Poppins', sans-serif;
+    color: #499e75;
+    margin: 2.5%;
+    font-size: 60px;
+    display: block;
+  }
+  
+  .formPrimerjuego {
+    margin: 20px;
+  }
+  
+  .inputPrimerjuego {
+    width: 400px;
+    height: 20%;
+    font-size: 40px;
+    margin: 5%;
+  }
+  
+  button {
+    border-radius: 30px;
+    width: 200px;
+    height: 45px;
+    background-color: #98ad77;
+  }
+  
