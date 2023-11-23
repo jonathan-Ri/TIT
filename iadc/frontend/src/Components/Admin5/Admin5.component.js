@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Resultadoprestigio.module.css';
+import styles from './Admin5.module.css';
 
-const Resultadoprestigio = () => {
-  // Matriz con las frases específicas
-  const frases = [
+const Admin5 = () => {
+  const frases = [  
     ['Objetivo', 'Donación', 'Castigo', 'Jugador 1', '$100', '$100'],
     ['Jugador 2', '$0', '$290', 'Jugador 3', '$0', '$200'],
     ['Jugador 4', '$300', '$0', 'Jugador 5', '$200', '$0']
@@ -14,12 +13,11 @@ const Resultadoprestigio = () => {
     <div className={styles.body}>
       <div className="container">
         <div className="row">
-          <h1>Ronda 1 - Apoyo</h1>
+          <h1>Ronda 1 - Obtención de estatus</h1>
         </div>
         <div className="row">
           <div className="col">
             <h3>Selección de jugador.</h3>
-            {/* Integración de la tabla aquí */}
             <table border="1">
               {frases.map((fila, indexFila) => (
                 <tr key={indexFila}>
@@ -33,13 +31,12 @@ const Resultadoprestigio = () => {
         </div>
         <br />
         <div className="col">
-          <Link className={styles.button} to="/tutorial-1">
-            Ok, ¡Finalizar!
-          </Link>
+          <Link className={styles.button} to="/pagina-anterior">Atrás</Link>
+          <Link className={styles.button} to="/tutorial-1">Continuar</Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default Resultadoprestigio;
+export default Admin5;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Inicio.module.css';
+import styles from './Negociacion.module.css';
 import { useNavigate } from 'react-router-dom';
 import imagen from './reloj arena.png';
 

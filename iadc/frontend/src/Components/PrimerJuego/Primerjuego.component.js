@@ -1,4 +1,8 @@
 import React from 'react';
+import React, { useState } from 'react';
+import styles from './Primerjuego.module.css';
+import { Link } from 'react-router-dom';
+
 
 const PrimerJuego = () => {
   return (

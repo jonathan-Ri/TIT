@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './Prestigio.module.css';
 
 const Prestigio = () => {
   const [valores, setValores] = useState([0, 0, 0, 0, 0]);
