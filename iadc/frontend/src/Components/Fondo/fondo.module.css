@@ -31,8 +31,8 @@
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
 
-.formInicio{
-    margin: 20px;
+.formInicio2{
+    margin-left: 0px;
     
 }
 .imputInicio{
@@ -47,9 +47,24 @@ button{
     height: 45px;
     background-color: #98AD77;
 }
+
+.button_verde{
+    border-radius: 10px;
+    width: 200px;
+    height: 45px;
+    background-color: #2AEA8E;
+}
+
 .Titulo{
     font-family: 'Poppins', sans-serif;
     color: #499E75;
+    margin: 2.5%;
+    font-size: 60px;
+    display: block;
+}
+.header{
+    font-family: 'Poppins', sans-serif;
+    color: #2AEA8E;
     margin: 2.5%;
     font-size: 60px;
     display: block;

@@ -23,6 +23,7 @@ import Tutorial2 from './Components/Tutorial2/tutorial2.component';
 import Inicio from './Components/Inicio/Inicio.component'
 import Donar from './Components/Donar/Donar.component'
 import Fondo from './Components/Fondo/fondo.component'
+import Creacion_team from './Components/Creacion_Team/Creacion_team.component';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
                <Route path="/inicio" element={<Inicio />}/>
                <Route path="/donar" element={<Donar />}/>
                <Route path="/fondo" element={<Fondo />}/>
+               <Route path="/team" element={<Creacion_team />}/>
              </Routes>
            </Router>
             </Col>
