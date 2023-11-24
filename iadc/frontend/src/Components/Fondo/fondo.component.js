@@ -20,7 +20,7 @@ const Fondo = () => {
                 alert('juego creado con exito');
                 //navigate('/team');
             }else{
-                alert(res);
+                alert("no es error de base de datos"+res);
                 //navigate('/team');
             }
         }).catch((err)=>{
