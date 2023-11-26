@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Prestigio.module.css';
+import styles from './prestigio.module.css';
 
 const Prestigio = () => {
   const [valores, setValores] = useState([0, 0, 0, 0, 0]);
@@ -29,7 +29,7 @@ const Prestigio = () => {
   };
 
   return (
-    <div className="container">
+    <div className="body">
       <h1>Ronda 1 - Apoyo</h1>
       <div className="row">
         <h3>Tu saldo actual</h3>
@@ -64,8 +64,8 @@ const Prestigio = () => {
         </div>
         <div className="col-md-4">
           <h3>¿Deseas castigar a un jugador?</h3>
-          <p>Texto 3</p>
-          <h4>*Realizar un castigo significa destruir parte del saldo de un jugador.</h4>
+          <p></p>
+          <h6>*Realizar un castigo significa destruir parte del saldo de un jugador.</h6>
           <button>Confirmar</button>
         </div>
       </div>

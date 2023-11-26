@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{ useState }from 'react';
 import {Table} from "react-bootstrap";
 import {useNavigate} from 'react-router-dom';
 import styles from './fondo.module.css'
@@ -8,10 +8,17 @@ import ExperimentoRow from '../ExperimentoRow/Experimento.component';
 const Fondo = () => {
     const navigate = useNavigate();
     const fecha= new Date(); 
-    const lista = [{"id_juego": 1,
-    "fecha": "2023-11-05"},{"id_juego": 2,
-    "fecha": "2023-11-10"},{"id_juego": 3,
-    "fecha": "2023-11-15"}]
+    const [lista, setLista] = useState([]);
+
+    const GetLista =()=>{
+        Juego.getAll().then((res)=>{
+           const salida= res.data
+           setLista(salida)
+        }).catch((err)=>{
+            alert(err)
+        })
+    }
+    GetLista()
     const handleSubmit = () => {
         const juego ={"fecha": fecha}
         
