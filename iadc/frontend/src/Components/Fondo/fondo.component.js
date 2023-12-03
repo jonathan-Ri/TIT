@@ -25,6 +25,7 @@ const Fondo = () => {
         
         Juego.create(juego).then((res)=>{
             if (res.status === 200){
+                let juego=res.data
                 console.log(res.data.id)
                 alert('juego creado con exito id'+res.data.id);
                 //navigate('/team');

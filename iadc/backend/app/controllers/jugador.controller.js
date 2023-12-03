@@ -19,10 +19,6 @@ exports.create = (req, res) => {
         imagen: req.body.imagen,
         id_equipo: req.body.id_equipo,
 
-        
-
-
-
         })
         .then(data => {
             res.send(data);

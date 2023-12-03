@@ -64,6 +64,7 @@ function App() {
                <Route path="/ResultadoPrestigio" element={<ResultadoPrestigio />}/>
                <Route path="/Creacion-team" element={<Creacion_team />}/>
 
+
              </Routes>
            </Router>
             </Col>

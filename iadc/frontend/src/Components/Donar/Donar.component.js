@@ -31,9 +31,7 @@ const Donar = () => {
     //editar rol
   }
   const getRonda=()=>{
-    //coneccion con base de datos
-
-    //editar numero de ronda
+    
   }
 
   const getPresupuesto=()=>{

@@ -1,6 +1,9 @@
 import React from "react";
 import styles from "./Creacion_team.module.css"
 import { useState} from "react";
+import TeamServices from "../../Services/team.service"
+import jugadorServices from "../../Services/jugador.service"
+
 
 const Creacion_team=()=>{
     const [jugador1, setJUgador1] = useState('');
@@ -11,7 +14,9 @@ const Creacion_team=()=>{
     const [jugador6, setJUgador6] = useState('');
 
    const crearTeam=(event)=>{
-     //creacion de team
+     
+
+
      alert('team creado exitosamente')
    };
    const handleMensajeChange2=(e)=>{
@@ -36,22 +41,22 @@ const Creacion_team=()=>{
     <div className={styles.bodi}>
     <div class="row">
      <form className={styles.formInicio} onSubmit={crearTeam}>
-      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <lavel className={styles.Titulo}>Ingrese ID del jugador 1</lavel>
       <input class={styles.imputInicio} type="text" id="jugador1" name="jugador1" placeholder="Ej: A1B2C3" onChange={handleMensajeChange1}/>
       <br></br>
-      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <lavel className={styles.Titulo}>Ingrese ID del jugador 2</lavel>
       <input class={styles.imputInicio} type="text" id="jugador2" name="jugador2" placeholder="Ej: A1B2C3" onChange={handleMensajeChange2}/>
       <br></br>
-      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <lavel className={styles.Titulo}>Ingrese ID del jugador 3</lavel>
       <input class={styles.imputInicio} type="text" id="jugador3" name="jugador3" placeholder="Ej: A1B2C3" onChange={handleMensajeChange3}/>
       <br></br>
-      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <lavel className={styles.Titulo}>Ingrese ID del jugador 4</lavel>
       <input class={styles.imputInicio} type="text" id="jugador4" name="jugador4" placeholder="Ej: A1B2C3" onChange={handleMensajeChange4}/>
       <br></br>
-      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <lavel className={styles.Titulo}>Ingrese ID del jugador 5</lavel>
       <input class={styles.imputInicio} type="text" id="jugador5" name="jugador5" placeholder="Ej: A1B2C3" onChange={handleMensajeChange5}/>
       <br></br>
-      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <lavel className={styles.Titulo}>Ingrese ID del jugador 6</lavel>
       <input class={styles.imputInicio} type="text" id="jugador6" name="jugador6" placeholder="Ej: A1B2C3" onChange={handleMensajeChange6}/>
       <br></br>
       <button type='submit'>Aceptar</button>
