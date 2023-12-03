@@ -9,6 +9,7 @@ const Fondo = () => {
     const navigate = useNavigate();
     const fecha= new Date(); 
     const [lista, setLista] = useState([]);
+    const [tuToken, setToken] = useState({id:''});
 
     const GetLista =()=>{
         Juego.getAll().then((res)=>{
@@ -24,14 +25,16 @@ const Fondo = () => {
         
         Juego.create(juego).then((res)=>{
             if (res.status === 200){
-                alert('juego creado con exito');
+                console.log(res.data.id)
+                alert('juego creado con exito id'+res.data.id);
                 //navigate('/team');
             }else{
-                alert("no es error de base de datos"+res);
+
+                console.log("no es error de base de datos"+res);
                 //navigate('/team');
             }
         }).catch((err)=>{
-            alert(err);
+            console.log(err);
         })     
   };
 

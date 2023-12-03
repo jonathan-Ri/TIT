@@ -62,6 +62,7 @@ function App() {
                <Route path="/Prestigio" element={<Prestigio />}/>
                <Route path="/PrimerJuego" element={<PrimerJuego />}/>
                <Route path="/ResultadoPrestigio" element={<ResultadoPrestigio />}/>
+               <Route path="/Creacion-team" element={<Creacion_team />}/>
 
              </Routes>
            </Router>

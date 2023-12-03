@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:80/api",
+  baseURL: "https://buildbackend.onrender.com/api",
   headers: {
     "Content-type": "application/json"
   }
