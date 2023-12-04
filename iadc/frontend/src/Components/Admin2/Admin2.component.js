@@ -26,7 +26,7 @@ const Admin2 = () => {
             <div className="col">
               <h3>ID</h3>
               {[...Array(6)].map((_, index) => (
-                <div key={index} className="row" style={{ marginBottom: '10px' }}>
+                <div key={index} className="row" style={{ marginBottom: '1vh' }}>
                   <input type="text" value={index + 1} readOnly className={styles.imputAdmin2} />
                 </div>
               ))}
@@ -35,15 +35,13 @@ const Admin2 = () => {
             <div className="col">
               <h3>Estado</h3>
               {[...Array(6)].map((_, index) => (
-                <div key={index} className="row" style={{ marginBottom: '10px' }}>
+                <div key={index} className="row" style={{ marginBottom: '1vh' }}>
                   {/* <input type="checkbox" checked={/* Aquí iría la lógica para marcar automáticamente de si está conectado o no *//*} /> */}
                 </div>
               ))}
             </div>
           </div>
-          <div className="row justify-content-between align-items-end">
             <button type="submit">Comenzar</button>
-          </div>
         </form>
       </div>
     </div>

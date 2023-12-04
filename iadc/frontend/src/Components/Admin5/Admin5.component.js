@@ -10,32 +10,38 @@ const Admin5 = () => {
   ];
 
   return (
-    <div className={styles.body}>
-      <div className="container">
-        <div className="row">
-          <h1>Ronda 1 - Obtención de estatus</h1>
-        </div>
-        <div className="row">
-          <div className="col">
-            <h3>Selección de jugador.</h3>
-            <table border="1">
-              {frases.map((fila, indexFila) => (
-                <tr key={indexFila}>
-                  {fila.map((celda, indexCelda) => (
-                    <td key={indexCelda}>{celda}</td>
-                  ))}
-                </tr>
-              ))}
-            </table>
-          </div>
-        </div>
-        <br />
-        <div className="col">
+<div className={styles.body}>
+  <div className="container">
+    <h1>Ronda 1 - Obtención de estatus</h1>
+
+    <div className="row">
+      <div className="col">
+        <h3>Selección de jugador.</h3>
+        <table className={styles.table}>
+          <tbody>
+            {frases.map((fila, indexFila) => (
+              <tr key={indexFila}>
+                {fila.map((celda, indexCelda) => (
+                  <td key={indexCelda}>{celda}</td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div className="row">
+      <div className="col">
+        <div className={styles.buttonsContainer}>
           <Link className={styles.button} to="/pagina-anterior">Atrás</Link>
           <Link className={styles.button} to="/tutorial-1">Continuar</Link>
         </div>
       </div>
     </div>
+  </div>
+</div>
+
   );
 };
 
