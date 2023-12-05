@@ -8,7 +8,7 @@ const get = id =>{
     return http.get(`/equipo/${id}`);
 }
 
-const create = data=()=>{
+const create = data=>{
     return http.post('/equipo',data);
 }
 

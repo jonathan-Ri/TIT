@@ -33,6 +33,7 @@ import Negociación from './Components/Negociación/Negociacion.component'
 import Prestigio from './Components/Prestigio/prestigio.component'
 import PrimerJuego from './Components/PrimerJuego/Primerjuego.component'
 import ResultadoPrestigio from './Components/ResultadoPrestigio/Resultadoprestigio.component'
+import Espera from './Components/Espera/Espera.component'
 
 
 
@@ -63,6 +64,7 @@ function App() {
                <Route path="/PrimerJuego" element={<PrimerJuego />}/>
                <Route path="/ResultadoPrestigio" element={<ResultadoPrestigio />}/>
                <Route path="/Creacion-team" element={<Creacion_team />}/>
+               <Route path="/Espera" element={<Espera />}/>
 
 
              </Routes>

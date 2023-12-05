@@ -36,7 +36,7 @@ const Fondo = () => {
             }
         }).catch((err)=>{
             console.log(err);
-        })     
+        })   
   };
 
   const DataTable =()=>{
