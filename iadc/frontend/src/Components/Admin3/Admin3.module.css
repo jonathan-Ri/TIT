@@ -1,34 +1,50 @@
-.body {
-    background-image: url('./fondo.PNG');
-    background-size: cover;
+.container {
+  background-image: url('./fondo.PNG');
+  background-size: contain;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 100%; /* Ancho igual al 100% del viewport width */
+  height: 100%; /* Alto igual al 100% del viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+  .row{
     width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
   }
-  
+
   .Titulo {
     font-family: 'Poppins', sans-serif;
     color: #499e75;
     margin: 2.5%;
-    font-size: 60px;
+    font-size: 3vw;
     display: block;
   }
   
   .formAdmin3 {
-    margin: 20px;
+    margin: 2%;
   }
   
   .imputAdmin3 {
-    width: 400px;
-    height: 20%;
-    font-size: 40px;
-    margin: 5%;
+    width:80%;
+    height: 10%;
+    font-size: 3vw;
+    margin: 2%;
   }
   
   button {
-    border-radius: 30px;
-    width: 200px;
-    height: 45px;
+    border-radius: 15px;
+    width: 15%;
+    height: 8%;
     background-color: #98ad77;
+    font-size: 1vw;
+    margin: 2%;
   }
   
+
