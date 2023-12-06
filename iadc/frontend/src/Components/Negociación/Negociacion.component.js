@@ -19,7 +19,7 @@ const Negociacion = () => {
 
   return (
     <div className={styles.body}>
-      <div className="row">
+      <div className={styles.bodyContainer}>
         <form className={styles.formNegociacion} onSubmit={handleSubmit}>
           <label className={styles.Titulo}>Negociación</label>
           <div className="col">
@@ -27,7 +27,7 @@ const Negociacion = () => {
               <h2>En esta fase será guiado de forma presencial para discutir lo siguiente:</h2>
             </div>
             <div className="row">
-              <h4>Avance a la siguiente ronda.</h4>
+              <h3>Avance a la siguiente ronda.</h3>
             </div>
             <div className="row">
               <h4>Asignación de rol de defensa o ataque.</h4>
@@ -37,7 +37,7 @@ const Negociacion = () => {
             </div>
             <div className="row">
               
-              <img src={imagen} className={styles.imagenR} alt="reloj arena" />
+              {/*<img src={imagen} className={styles.imagen} alt="reloj arena" />*/}
             </div>
           </div>
           <button type="submit">Aceptar</button>

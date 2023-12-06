@@ -1,40 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Nueva+Fuente:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bodiContainer {
+  padding: 0;
+}
+
 .body {
-    background-image: url('./fondo.PNG');
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-  }
-  
-  .Titulo {
-    font-family: 'Poppins', sans-serif;
-    color: #499e75;
-    margin: 2.5%;
-    font-size: 60px;
-    display: block;
-  }
-  
-  .formNegociacion {
-    margin: 20px;
-  }
-  
-  .imputNegociacion {
-    width: 400px;
-    height: 20%;
-    font-size: 40px;
-    margin: 5%;
-  }
-  
-  button {
-    border-radius: 30px;
-    width: 200px;
-    height: 45px;
-    background-color: #98ad77;
-  }
-  .imagenR{
-    max-width: 10%;
-    margin-left: 45%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-  }
+  background-image: url('./borde2.PNG'), url('./borde1.PNG');
+  background-size: contain, contain;
+  background-position: right center, left center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ajuste para centrar en el eje Y */
+}
+
+.formNegociacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Titulo {
+  color: #499E75;
+  margin: 2.5%;
+  font-size: 60px;
+  display: block;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+.col {
+  flex: 1;
+  padding: 10px; /* Ajusta según sea necesario */
+}
+
+h1 {
+  margin: 3vh !important;
+  font-size: 2vw;
+  font-family: 'Nueva Fuente', sans-serif; /* Reemplaza 'Nueva Fuente' con el nombre de la fuente seleccionada */
+  font-weight: 300; /* Ajusta el peso de la fuente según sea necesario */
+}
+
+h2, h3, h4 {
+  margin: 0;
+  font-size: 2vw;
+  font-family: 'Nueva Fuente', sans-serif; /* Reemplaza 'Nueva Fuente' con el nombre de la fuente seleccionada */
+  text-align: justify !important; /* Añadido para justificar el texto */
+  list-style-type: none; /* Oculta los puntos de la lista */
+  font-weight: 300; /* Ajusta el peso de la fuente según sea necesario */
+}
+
+h2::before, h3::before, h4::before {
+  text-align: justify !important; /* Añadido para justificar el texto */
+
+  content: '•'; /* Utiliza un punto (•) como contenido del pseudo-elemento ::before */
+  margin-right: 5px; /* Espacio entre el punto y el texto */
+}
+
+.imagen {
+  width: 20vh; /* Ajusta según sea necesario */
+  margin-left: 500vh; /* Ajusta según sea necesario */
+}
+
+button {
+  border-radius: 30px;
+  width: 10vh;
+  height: 10vh;
+  background-color: #98ad77;
+  margin: 10px !important;
+}
   

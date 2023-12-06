@@ -33,7 +33,7 @@ const Prestigio = () => {
       <h1>Ronda 1 - Apoyo</h1>
       <div className="row">
         <h3>Tu saldo actual</h3>
-        <input type="text" value={resultado} readOnly />
+        <input type="text" value={2000} readOnly />
         <button onClick={calcularResultado}>Calcular</button>
       </div>
       <div className="row" style={{ borderBottom: '1px dashed #000' }}>
@@ -52,7 +52,7 @@ const Prestigio = () => {
         <div className="col-md-4" style={{ borderRight: '1px dashed #000' }}>
           {valores.map((value, index) => (
             <div key={index} style={{ marginBottom: '10px' }}>
-              <label>{`$`}</label>
+              <label>jugador {parseInt(index)+1+" "+`$`}</label>
               <input
                 type="number"
                 value={value}

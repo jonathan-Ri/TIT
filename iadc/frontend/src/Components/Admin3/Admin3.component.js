@@ -17,14 +17,14 @@ const Admin3 = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div>
         <form className={styles.formAdmin3} onSubmit={handleSubmit}>
           <label className={styles.Titulo}>Ronda 1 - Donación</label>
           <label>Donaciones del equipo</label>
           <div className="row">
             {/* Primera columna */}
             <div className="col">
-              <h3>Jugador</h3>
+              <h3>Jugador ID</h3>
               {[...Array(6)].map((_, index) => (
                 <div key={index} className="row" style={{ marginBottom: '1vh' }}>
                   <input type="text" value={index + 1} readOnly className={styles.imputAdmin3} />

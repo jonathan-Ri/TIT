@@ -14,10 +14,7 @@ exports.create = (req, res) => {
     Castigo.create({
         id_equipo: req.body.id_equipo,
         nombre_equipo: req.body.nombre_equipo,
-        pozo_comun: req.body.pozo_comun,
-
-
-  
+        pozo_comun: req.body.pozo_comun
     })
     .then(data => {
         res.send(data);

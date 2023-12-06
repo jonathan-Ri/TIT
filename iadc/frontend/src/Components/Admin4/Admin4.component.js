@@ -17,11 +17,11 @@ const Admin4 = () => {
   };
 
   return (
-    <div className={styles.body}>
+    <div >
 
         <form className={styles.formAdmin3} onSubmit={handleSubmit}>
           <label className={styles.Titulo}>Ronda 1 - Estatus</label>
-          <label>Donaciones del equipo</label>
+          <h2>Donaciones del equipo</h2>
           <div className="row" style={{ marginLeft:'1vh' }}>
             {/* Primera columna */}
             <div className="col">
@@ -56,8 +56,8 @@ const Admin4 = () => {
             <div className="col">
               <h3>Estado</h3>
               {[...Array(6)].map((_, index) => (
-                <div key={index} className="row" style={{ marginBottom: '1vh' , width:'50%' }}>
-                  {/* <input type="checkbox" checked={/* Aquí iría la lógica para marcar automáticamente si está conectado o no *//*} /> */}
+                <div key={index} className="row" style={{ marginBottom: '3.7vh' , width:'50%' }}>
+                  { <input type="checkbox" value="true" /> }
                 </div>
               ))}
             </div>

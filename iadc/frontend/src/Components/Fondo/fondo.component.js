@@ -7,7 +7,7 @@ import ExperimentoRow from '../ExperimentoRow/Experimento.component';
 
 const Fondo = () => {
     const navigate = useNavigate();
-    const fecha= new Date(); 
+    const Fecha= new Date(); 
     const [lista, setLista] = useState([]);
     const [tuToken, setToken] = useState({id:''});
 
@@ -19,27 +19,25 @@ const Fondo = () => {
             alert(err)
         })
     }
-    GetLista()
-    const handleSubmit = () => {
-        const juego ={"fecha": fecha}
-        
-        Juego.create(juego).then((res)=>{
-            if (res.status === 200){
-                let juego=res.data
-                console.log(res.data.id)
-                alert('juego creado con exito id'+res.data.id);
-                //navigate('/team');
-            }else{
 
-                console.log("no es error de base de datos"+res);
-                //navigate('/team');
-            }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const juego ={fecha: Fecha}
+        
+        Juego.create(juego).then((res)=>{          
+            let juego=res.data
+            console.log(res)
+            localStorage.setItem('id_juego',juego.id_juego)
+            alert('juego creado con exito id'+juego.id_juego);
+            navigate('/Creacion-team');
         }).catch((err)=>{
             console.log(err);
         })   
+         
   };
 
   const DataTable =()=>{
+    GetLista()
     return lista.map((res)=>{
         return <ExperimentoRow  obj={res}/>
     })

@@ -12,9 +12,11 @@ const Inicio = () => {
     setMensaje(e.target.value);
   };
   const handleSubmit = (event) => { 
+    localStorage.clear()
     event.preventDefault();
     jugadorService.getAll().then((res)=>{
       let datos= res.data 
+      console.log(datos)
       for (let jug in datos){
         console.log(datos[jug])
         if (datos[jug].id_jugador == parseInt(mensaje)){
@@ -29,20 +31,21 @@ const Inicio = () => {
       console.log(err)
     })
     // Luego, activa la redirección
-    navigate('/donar');
+    //navigate('/donar');
 };
-  return (
-     <div className={styles.bodi}>
-       <div class="row">
-        <form className={styles.formInicio} onSubmit={handleSubmit}>
-         <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
-         <input className={styles.imputInicio} type="text" id="id" name="id" placeholder="Ej: A1B2C3" onChange={handleMensajeChange}/>
-         <br></br>
-         <button type='submit'>Aceptar</button>
-        </form>
-       </div>
-     </div>
-  );
+return (
+  <div className={styles.bodiContainer}>
+    <div class={styles.bodi}>
+     <form className={styles.formInicio} onSubmit={handleSubmit}>
+      <lavel className={styles.Titulo}>Ingrese su ID asignado</lavel>
+      <input class={styles.imputInicio} type="text" id="id" name="id" placeholder="Ej: A1B2C3" onChange={handleMensajeChange}/>
+      <br></br>
+      <button type='submit'>Aceptar</button>
+     </form>
+    </div>
+
+  </div>
+);
 }
 
 export default Inicio;

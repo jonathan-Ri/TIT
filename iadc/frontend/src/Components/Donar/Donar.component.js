@@ -16,7 +16,7 @@ class Donar extends Component {
       donacion: 0,
       Presupuesto:0,
       Ronda:0,
-      Id:"hola",//localStorage.getItem('token');
+      Id: localStorage.getItem('token'),
       Rol:"Ataque",
       trigger:false,
       don:{}
@@ -24,7 +24,8 @@ class Donar extends Component {
   }
   
   componentDidMount() {
-    // La lógica que quieres ejecutar solo una vez al montar el componente
+    console.log(this.state.Id)
+    jugadorService.get(this.state.Id)
     console.log("Componente montado, ejecutando la función una vez");
     
     // Puedes llamar a tu función aquí
@@ -57,7 +58,7 @@ class Donar extends Component {
    }
   }
   else{
-    alert("error al identificar el usuario, ingrese nuevamente")
+    alert("Donacion realizada exitosa")
   }
   };
   getRol=()=>{
@@ -83,15 +84,15 @@ class Donar extends Component {
   render(){
   return (
     <div className={styles.bodi}>
-        <div class="row">
-        <lavel className={styles.Titulo}>Ronda N° {this.Ronda}</lavel>
-        <div className={styles.Rol}> Rol de {this.Rol}</div>
+        <div className={styles.bodiContainer}>
+        <lavel className={styles.Titulo}>Ronda N° {this.state.Ronda}</lavel>
+        <div className={styles.Rol}> Rol de {this.state.Rol}</div>
         <div class="row">
             <div class="col">
               <img className={styles.icono} src={Billetera}/>
             </div>
             <div class="col">
-                <div className={styles.presupuesto}>{this.Presupuesto}</div>
+                <div className={styles.presupuesto}>{this.state.Presupuesto}</div>
             </div>
         </div>
         </div>

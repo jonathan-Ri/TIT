@@ -33,3 +33,10 @@
     font-size: 1vw;
     margin: 2%;
   }
+  .conectado {
+    color: green;
+  }
+  
+  .noConectado {
+    color: red;
+  }

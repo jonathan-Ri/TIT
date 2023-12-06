@@ -15,12 +15,15 @@ const create = data =>{
 const update = (id, data) => {
     return http.put(`/juego/${id}`, data);
 };
-
+const remove = id =>{
+    return http.delete(`/jugador/${id}`);
+}
 const JuegoService ={
     getAll,
     get,  
     create,
-    update
+    update,
+    remove
 };
 
 export default JuegoService;
