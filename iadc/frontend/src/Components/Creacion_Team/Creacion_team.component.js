@@ -8,6 +8,15 @@ import {useNavigate} from 'react-router-dom';
 
 const Creacion_team=()=>{
     const id_juego= localStorage.getItem('id_juego')
+    const jug={
+      id_jugador: "123abcdeadasd",
+      fondo: 10000,
+      imagen: 1,
+      estado: 1,
+      id_equipo: 1,
+      createdAt: "2023-01-01T12:00:00Z",
+      updatedAt: "2023-01-01T14:30:00Z"
+    }
     const navigate = useNavigate();
     const [jugador1, setJUgador1] = useState('');
     const [jugador2, setJUgador2] = useState('');
@@ -19,35 +28,65 @@ const Creacion_team=()=>{
     const [rol, setRol] = useState('Ataque');
     const fondo = 3000;//define el dinero inicial de los participantes
 
-   const crearTeam=(event)=>{
+   const crearTeam=async (event)=>{
+    event.preventDefault();
     let team={
-      id_equipo: 1,
-      nombre_equipo: "1234",
+      id_equipo: 35,//id_juego,
+      nombre_equipo: "z",
       pozo_comun: 0
      }
-     TeamServices.create(team).then((res)=>{
-      console.log(res.data)
-      setTeam(res.data)
-      console.log("se creo el team exitosamente")
-     }).catch((err)=>{
-      console.log(err)
-     })
-
-     event.preventDefault();
-     let jugadores=[jugador1,jugador2,jugador3,jugador4,jugador5,jugador6]
-     console.log(jugadores)
-     for(let i in 6){
-
-      jugadorServices.create({id_jugador: jugadores[i], fondo:3000, id_equipo: Team.id_equipo, estado: 0}).then((res)=>{
+    
+      await TeamServices.create(team).then((res)=>{
         console.log(res)
       }).catch((err)=>{
         console.log(err)
       })
-     }
-     
-     alert('team creado exitosamente')
-     navigate('/Admin2')
-   };
+    try {
+      console.log("entra")
+      // Array con los datos de los 6 usuarios a crear
+      let jugadores=[jugador1,jugador2,jugador3,jugador4,jugador5,jugador6]
+      const usuariosAcrear = [
+        jug,
+        { id_jugador: String(jugadores[0]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z" },
+        { id_jugador: String(jugadores[1]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z"},
+        { id_jugador: String(jugadores[2]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z"},
+        { id_jugador: String(jugadores[3]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z"},
+        { id_jugador: String(jugadores[4]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z"},
+        { id_jugador: String(jugadores[5]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z"},
+      ];
+      console.log(usuariosAcrear)
+  
+      // Iterar sobre el array y llamar a la función create para cada usuario
+      for (const usuario of usuariosAcrear) {
+        console.log("entra tambien")
+        await jugadorServices.create(usuario).then((res)=>{
+          console.log(res.data)
+        }).catch((err)=>{
+          console.log(err)
+        });
+        console.log(`Usuario creado: ${usuario.nombre}`);
+      }
+  
+      console.log('Todos los usuarios han sido creados exitosamente.');
+      navigate('/Admin3')
+    } catch (error) {
+      console.error('Error al crear usuarios:', error);
+    }
+  };
+    
+   const crearJugadores=()=>{
+    let jugadores=[jugador1,jugador2,jugador3,jugador4,jugador5,jugador6]
+    console.log(jugadores)
+    for(let i =0;i<=5;i++){
+     jugadorServices.create({id_jugador: String(jugadores[0]), fondo:3000, id_equipo: parseInt(id_juego), imagen:1, estado:0, createdAt: "2023-01-01T12:00:00Z", updatedAt: "2023-01-01T14:30:00Z"}).then((res)=>{
+       console.log(res)
+     }).catch((err)=>{
+       console.log(err)
+     })
+    }
+    
+    
+   }
    const handleMensajeChange2=(e)=>{
      setJUgador1(e.target.value)
    }
